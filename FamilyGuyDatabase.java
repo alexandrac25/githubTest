@@ -17,7 +17,7 @@ public class FamilyGuyDatabase{
     rows.remove(0);
     rows.remove(0);
     
-    for(String row : rows){
+    for(String row : rows){ 
        String[] parts = splitOnNonQuotedCommas(row);
        int seasons = Integer.parseInt(parts[0]);
        int episodeNums = Integer.parseInt(parts[1]);
@@ -46,12 +46,13 @@ public class FamilyGuyDatabase{
             e.printStackTrace();
         }
         return data;
+        
     }
 
 
     private String[] splitOnNonQuotedCommas(String hasCommasWithinQuotes) {
         return hasCommasWithinQuotes.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
-    }
-
+    } 
+  
 
 }
